@@ -1,9 +1,11 @@
 
-from pydantic import BaseModel
+from pydantic import BaseModel,ConfigDict
 
 
 
 class jobDescription(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    
     role: str
     requiredSkill: str
     minimumSkill: str

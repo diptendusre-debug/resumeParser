@@ -2,3 +2,6 @@
 groq
 pydantic
 dotenv
+pypdf
+docx
+pathlib

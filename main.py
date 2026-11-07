@@ -2,6 +2,9 @@ import os
 from groq import Groq
 from dotenv import load_dotenv
 from jobd import jobd_schema,jobDescription
+from resumeRead import readResume
+import time
+from resumec import resumeCreation
 
 load_dotenv()
 #Getting the API Key from environment Variable
@@ -18,12 +21,14 @@ def userInput():
         line=input()
         if line.lower()=="exit":
             break;
-        userinput=lines.append(line)
-    return userinput
+        lines.append(line)
+    return "\n".join(lines)
 
 
 def main():
     userMessage=userInput()
+    if not userMessage.strip():
+        raise ValueError("No Job Description Provide")
     systemMessage={
         "role":"system",
         "content":"You are advance resume parsing agent.The user has given you input about the job description.Your task is to read the job description and convert the job description "
@@ -35,6 +40,14 @@ def main():
     }
     messages=[systemMessage,user_Input]
     response=client.chat.completions.create(model=model,messages=messages,response_format={"type":"json_schema","json_schema":{"name":"jobd_schema","strict":True,"schema":jobd_schema}})
+    jobrequirements=response.choices[0].message.content
+    print("***********Extracted Job Requirements:************")
+    print(jobrequirements)
+    print("**************************************************")
+    time.sleep(5)
+
+
+
 
 if __name__=="__main__":
     main()
