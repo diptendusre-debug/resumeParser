@@ -1,10 +1,11 @@
-from pydantic import BaseModel
+from pydantic import BaseModel,ConfigDict
 
 class resumeCreation(BaseModel):
+    model_config = ConfigDict(extra="forbid")
     name: str
     email: str
     phone: str
-    totalExpYears: int
+    totalExpYears: float
     skills: list[str]
     certification: list[str]
     experiences: list[str]

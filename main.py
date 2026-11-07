@@ -4,7 +4,8 @@ from dotenv import load_dotenv
 from jobd import jobd_schema,jobDescription
 from resumeRead import readResume
 import time
-from resumec import resumeCreation
+from resumec import resumeCreation,resumeSchema
+from resumeRead import readResume
 
 load_dotenv()
 #Getting the API Key from environment Variable
@@ -45,6 +46,25 @@ def main():
     print(jobrequirements)
     print("**************************************************")
     time.sleep(5)
+    resumeMessage=readResume()
+    systemMessage1={
+        "role":"system",
+        "content":"You are advance resume parsing agent.Yu need to go through the resume data and create the resume details "
+        "in json format using the resumeSchema"
+    }
+    for resume in resumeMessage:
+        resumeInput={
+            "role":"user",
+            "content":resume["content"]
+        }
+        messages=[systemMessage1,resumeInput]
+        response=client.chat.completions.create(model=model,messages=messages,response_format={"type":"json_schema","json_schema":{"name":"resumeSchema","strict":True,"schema":resumeSchema}})
+        resumedetails=response.choices[0].message.content
+        print("***********Extracted Resume Details :************")
+        print(resumedetails)
+        print("**************************************************")
+    time.sleep(5)
+    
 
 
 
