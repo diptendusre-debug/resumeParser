@@ -49,7 +49,7 @@ def main():
     resumeMessage=readResume()
     systemMessage1={
         "role":"system",
-        "content":"You are advance resume parsing agent.Yu need to go through the resume data and create the resume details "
+        "content":"You are advance resume parsing agent.You need to go through the resume data and create the resume details "
         "in json format using the resumeSchema"
     }
     for resume in resumeMessage:
@@ -63,7 +63,19 @@ def main():
         print("***********Extracted Resume Details :************")
         print(resumedetails)
         print("**************************************************")
-    time.sleep(5)
+        time.sleep(5)
+        systemMessage2={
+            "role":"system",
+            "content":"You are advance resume parsing agent.You need to compare the jobrequirements and resumedetails. "
+            "Once all the comparison is done give me the best suitable candidate name,phone no and email in json format"
+            }
+        message2={
+            "role":"user",
+            "content":resumedetails
+        }
+        messages3=[systemMessage2,message2]
+        finalresponse=client.chat.completions.create(model=model,messages=messages3)
+        print(finalresponse.choices[0].message.content)
     
 
 
