@@ -12,10 +12,14 @@ client=Groq(api_key=my_api_keys)
 model="qwen/qwen3.8-27b"
 
 def userInput():
-    userMessage=input("Please enter the Job description in detailed way: ")
-    if not userMessage:
-        raise NameError("Job Description is not mentioned.Please enter at least a job description")
-    return userMessage
+    print("Please enter the Job description in detailed way.Type exit to finish")
+    lines=[]
+    while True:
+        line=input()
+        if line.lower()=="exit":
+            break;
+        userinput=lines.append(line)
+    return userinput
 
 
 def main():
