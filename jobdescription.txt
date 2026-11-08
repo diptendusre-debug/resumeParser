@@ -1,0 +1,119 @@
+Role Overview
+
+Experience Range: 3–6 years of experience in production infrastructure, infrastructure engineering, Site Reliability Engineering, or DevOps roles.
+
+Education: Bachelor's degree in Computer Science, Information Technology, or equivalent practical experience.
+
+Role: Responsible for maintaining the reliability, availability, scalability, and performance of production systems and infrastructure.
+
+Skills Breakdown
+
+1. Minimum Skills (Must-Have Basics)
+
+Core Linux/Unix system administration and command-line proficiency.
+
+Basic scripting knowledge using Python, Bash, or Shell.
+
+Understanding of networking fundamentals, including TCP/IP, DNS, HTTP/HTTPS, and load balancing.
+
+Knowledge of troubleshooting production infrastructure and application issues.
+
+Understanding of monitoring, logging, and alerting concepts.
+
+Familiarity with Git and version control systems.
+
+2. Cloud Infrastructure
+
+Hands-on experience with AWS, Azure, or Google Cloud Platform.
+
+Understanding of compute, storage, networking, and identity management.
+
+Experience with AWS EC2, S3, VPC, IAM, ELB, and Auto Scaling.
+
+Knowledge of cloud infrastructure security and best practices.
+
+Understanding of infrastructure provisioning and configuration management.
+
+3. Containerization and Orchestration
+
+Experience with Docker and container technologies.
+
+Working knowledge of Kubernetes.
+
+Understanding of Kubernetes deployments, services, pods, ConfigMaps, and Secrets.
+
+Experience troubleshooting containerized applications.
+
+Knowledge of Helm charts and Kubernetes resource management.
+
+4. CI/CD and Automation
+
+Experience with CI/CD tools such as Jenkins, GitHub Actions, GitLab CI, or Azure DevOps.
+
+Understanding of automated build, testing, and deployment pipelines.
+
+Experience with Infrastructure as Code tools such as Terraform or CloudFormation.
+
+Ability to automate operational tasks using Python or Shell scripting.
+
+5. Monitoring and Observability
+
+Experience with monitoring tools such as Prometheus, Grafana, Datadog, or Dynatrace.
+
+Understanding of metrics, logs, and distributed tracing.
+
+Knowledge of SLIs, SLOs, and SLAs.
+
+Experience creating dashboards, alerts, and monitoring solutions.
+
+Ability to identify performance bottlenecks and troubleshoot application issues.
+
+6. Production Support and Incident Management
+
+Experience handling production incidents and performing root cause analysis.
+
+Knowledge of incident management and escalation processes.
+
+Experience with problem management and preventive actions.
+
+Understanding of high availability, disaster recovery, and fault tolerance.
+
+Ability to participate in on-call support and production deployments.
+
+Key Responsibilities
+
+Maintain high availability, reliability, and performance of production infrastructure.
+
+Monitor production systems and proactively identify potential failures.
+
+Troubleshoot infrastructure, application, and network-related issues.
+
+Develop automation scripts to reduce manual operational activities.
+
+Implement and maintain CI/CD pipelines.
+
+Manage cloud infrastructure and containerized workloads.
+
+Build and maintain monitoring dashboards and alerting mechanisms.
+
+Participate in incident response, root cause analysis, and post-incident reviews.
+
+Implement reliability improvements and operational best practices.
+
+Collaborate with development, security, and infrastructure teams.
+
+Preferred Qualifications
+
+Experience working in large-scale distributed systems.
+
+Knowledge of microservices architecture.
+
+Understanding of performance engineering and capacity planning.
+
+Experience with GitOps tools such as ArgoCD.
+
+Knowledge of security scanning and vulnerability management.
+
+Familiarity with chaos engineering and resilience testing.
+
+Understanding of Agile and DevOps methodologies.
